@@ -61,11 +61,11 @@ class MyMeteo extends HTMLElement {
           <img src="${iconUrl}" alt="Meteo icon">`;
         div.innerHTML = content;
       } else {
-        div.innerHTML = "City or coordinate not found";
+        div.innerHTML = "City or coordinate not found.";
       }
     };
     request.onerror = () => {
-      div.innerHTML = "City or coordinate not found";
+      div.innerHTML = "Error 404.";
     };
     request.send();
   }
